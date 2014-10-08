@@ -1,80 +1,35 @@
-/* Reset some basic elements */
+/* Globals */
 
-body, h1, h2, h3, h4, h5, h6,
-article, section, aside, nav,
-p, blockquote, pre, hr,
-dl, dd, ol, ul, figure {
-    margin: 0;
-    padding: 0;
-}
-
-body { 
+body {
+    padding-top: 20px;
+    padding-bottom: 20px;
     font-size: 16px;
-    font-family: sans-serif;
-    font-weight: 300;
-    line-height: 16px;    
-    background-color: #eae7e7;
-    -webkit-text-size-adjust: 100%;
 }
 
-h1, h2, h3, h4, h5, h6 {
-    font-weight: 300;
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+  margin-top: 0;
+  font-weight: normal;
+  color: #333;
 }
 
-p { 
-    margin-bottom: .5em;
+a { text-decoration: none; }
+a:hover, a:focus { text-decoration: underline; }
+
+/* Override Bootstrap's default container */
+
+@media (min-width: 1200px) {
+  .container {
+    width: 970px;
+  }
 }
 
-a {
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
-ol, ul { 
-    padding-left: 1em;
-    text-indent: -1em;
-    list-style-position: inside;
-}
-
-li { 
-    margin-bottom: .5em;
-    line-height: 1.1em;
-}
-
-img {
-    max-width: 100%;
-    vertical-align: middle;
-    border: none;
-}
-
-/* helper classes */
-
-.hide { 
-    position: absolute;
-    top:-9999px;
-    left: -9999px;
-}
-
-.margin-bottom { 
-    margin-bottom: 1em;
-}
-
-.no-bullets { 
-    list-style-type: none;
-}
-
-.wrapper {
-    margin-right: auto;
-    margin-left: auto;
-    padding-left: 2em;
-    padding-right: 2em;
-}
-
-.wrapper:after {
-    content: "";
-    display: table;
-    clear: both;
+@media (min-width: 1400px) {
+  .container {
+    width: 1160px;
+  }
 }
